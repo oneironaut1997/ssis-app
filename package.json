@@ -9,7 +9,7 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
-    "@praxxys/vue-utils": "file:.yalc/@praxxys/vue-utils",
+    "@praxxys/vue-utils": "^0.1.0",
     "@praxxys/vuetify-components": "^0.1.2",
     "axios": "^0.19.0",
     "core-js": "^2.6.6",
