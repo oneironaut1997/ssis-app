@@ -1,30 +1,34 @@
 <template>
-	<v-form ref="form">
+	<v-form v-model="valid" ref="form" :lazy-validation="true">
 		<slot></slot>
 	</v-form>
 </template>
 
 <script type="text/javascript">
+
+	import axios from 'axios';
+
 	export default {
 
 		data() {
 			return {
-				serverErrors: []
+				serverErrors: [],
+				valid: null,
 			};
 		},
 
 		methods: {
-			submitForm (validator, throwError = false) {
+			submitForm (throwError = false) {
 
-				return validator.validate()
-					.then(validated => {
-						return this.deliverPayload(validated, throwError);
-					})
+				if(this.$refs.form.validate()) {
+					return this.deliverPayload(throwError);
+				}
 
+				return Promise.reject();
 			},
 
-			deliverPayload(validated, throwError) {
-				if (this.$PRX.dialogLoader.loading || !validated) { return Promise.reject() }
+			deliverPayload(throwError) {
+				if (this.$PRX.dialogLoader.loading) { return Promise.reject() }
 
 				this.$PRX.dialogLoader.show();
 
