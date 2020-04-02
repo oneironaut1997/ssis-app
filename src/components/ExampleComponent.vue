@@ -40,7 +40,7 @@
 			showAlert () {
 				this.$PRX.alert.warning('You\'re awesome.', 'Warning!')
 					.then(() => {
-						console.log('do something after close.');
+						//console.log('do something after close.');
 					});
 			},
 

@@ -143,7 +143,7 @@ export default {
 				})
 				.catch(error => {
 					// do something with the error, such as reset the state
-					console.log(error);
+					alert(error);
 				});
 		}
 	}
