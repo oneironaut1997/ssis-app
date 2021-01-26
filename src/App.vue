@@ -4,7 +4,7 @@
 		<PRXProgressLoader></PRXProgressLoader>
 		<v-content>
 
-			<v-container fill-height>
+			<v-container fill-height pa-0>
 				<router-view :key="$route.fullPath"></router-view>
 			</v-container>
 

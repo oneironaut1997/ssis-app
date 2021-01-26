@@ -1,0 +1,35 @@
+html{
+    scroll-behavior: smooth;
+    overscroll-behavior: contain;
+    height: 100% !important;
+}
+
+body {
+    overflow-x: hidden;
+    overscroll-behavior: contain;
+    padding-top: constant(safe-area-inset-top);
+    padding-top: env(safe-area-inset-top);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: scale;
+    text-rendering: optimizeLegibility;
+    color: $color--black;
+    line-height: 1.5;
+    height: 100% !important;
+}
+
+
+.main {
+
+    main.v-content {
+        padding: 56px 0 62px !important;
+    }
+}
+
+
+// Border Radius
+.border-radius-default { border-radius: $border-radius-default; }
+.border-radius-20 { border-radius: $border-radius-20; }
+.border-radius-14 { border-radius: $border-radius-14; }
+.border-radius-10 { border-radius: $border-radius-10; }
+.border-radius-4 { border-radius: $border-radius-4; }
+.border-radius-0 { border-radius: 0 !important; }

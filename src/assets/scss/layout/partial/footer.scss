@@ -1,0 +1,15 @@
+/*
+* FOOTER
+* ftr : footer
+*/
+.main {
+
+	.v-bottom-navigation {
+		height: 62px !important;
+		border-top: 1px solid $color--gray--300;
+
+		&.v-item-group {
+			box-shadow: unset;
+		}
+	}
+}

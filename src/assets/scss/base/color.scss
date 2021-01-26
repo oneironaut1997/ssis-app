@@ -1,0 +1,37 @@
+/** 
+ * COLOR
+ * --
+ * Set the default values according to your preference.
+**/
+// Color Text
+.clr--primary { color: $color--primary; }
+
+.clr--secondary { color: $color--secondary; }
+
+.clr--green { color: $color--green; }
+.clr--red { color: $color--red; }
+.clr--orange { color: $color--orange; }
+.clr--yellow { color: $color--yellow; }
+
+.clr--white { color: $color--white; }
+.clr--gray--100 { color: $color--gray--100; }
+.clr--gray--300 { color: $color--gray--300; }
+.clr--gray--600 { color: $color--gray--600; }
+.clr--black { color: $color--black; }
+
+
+// Background Color
+.bg--primary { background: $color--primary; }
+
+.bg--secondary { background: $color--secondary; }
+
+.bg--green { background: $color--green; }
+.bg--red { background: $color--red; }
+.bg--orange { background: $color--orange; }
+.bg--yellow { background: $color--yellow; }
+
+.bg--white { background: $color--white; }
+.bg--gray--100 { background: $color--gray--100; }
+.bg--gray--300 { background: $color--gray--300; }
+.bg--gray--600 { background: $color--gray--600; }	
+.bg--black { background: $color--black; }

@@ -1,0 +1,13 @@
+/*
+* HEADER
+* hdr : header
+*/
+
+.main .theme--light.v-app-bar.v-toolbar.v-sheet {
+	height: 56px !important;
+	box-shadow: unset;
+
+	> .v-toolbar__content {
+		height: 56px !important;
+	}
+}

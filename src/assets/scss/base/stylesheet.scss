@@ -1,0 +1,319 @@
+/*
+* Stylesheet
+* ss : stylesheet
+*/
+.ss-frm {
+    margin-top: 0px;
+    box-sizing: border-box;
+
+    h1 {
+        font-size: 25px;
+        font-weight: 600;
+    }
+
+    h2 {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    h3 {
+        font-size: 16px;
+        font-weight: 600;
+    }
+}
+
+.ss-frm__cntnr {
+    display: flex;
+
+    .ss-frm__left {
+        width: 20%;
+    }
+
+    .ss-frm__right {
+        width: 80%;
+        padding-left: 40px;
+        box-sizing: border-box;
+    }
+
+    .nav-pills { cursor: pointer; }
+
+    .nav-pills .nav-link {
+        color: $color--white;
+    }
+
+    .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+        color: #fff;
+        background-color: $color--primary;
+    }
+}
+
+.ss-frm__header {
+    position: relative;
+    width: 100%;
+    padding: 60px 0;
+    box-sizing: border-box;
+
+    &:before {
+        position: absolute;
+        bottom: 50px;
+        left: 4.2%;
+        content: "";
+        width: 140px;
+        height: 24px;
+        // background: $color--primary2;
+    }
+
+    .frm-title * { 
+        font-weight: bold; 
+    }
+}
+
+
+.ss-frm__col {
+
+    &:first-child,
+    &:nth-child(2n+1) {
+        margin-left: 0;
+    }
+
+    .ss-frm__title {
+        position: relative;
+        padding-left: 18px;
+        display: block;
+
+        &:before {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            content: "";
+            width: 4px;
+            height: 20px;
+            background: $color--primary;
+        }
+
+        * {
+            text-transform: uppercase;
+        }
+    }
+
+    .frm-btn {
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+
+    .arrow-hldr {
+        margin-bottom: 15px;
+    }
+
+    .frm-slider {
+        margin-bottom: 15px;
+        
+        .slider-item {
+            width: 200px;
+            height: 100px;
+            // background: $color--light-gray;
+            position: relative;
+
+            h3 {
+
+            }
+        }
+    }
+}
+
+
+// Colors
+.ss-frm__paletteHolder {
+    width: 115px;
+    height: auto;
+    margin-right: 24px;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    // background: #262626;
+    // box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+    box-sizing: border-box;
+    vertical-align: top;
+    // border-radius: 4px;
+    overflow: hidden;
+
+    &:last-child { margin-right: 0; }
+
+    .ss-frm__palette {
+        width: 100%;
+        height: 115px;
+        margin-bottom: 8px;
+        border-radius: 6px;
+
+        // &.bg--1 { background: $color--primary; }
+        // &.bg--2 { background: $color--primary2; }
+        // &.bg--3 { background: $color--black; }
+        // &.bg--4 { background: $color--light-gray; }
+        // &.bg--5 { background: $color--white; }
+    }
+
+    p {
+        font-size: 12px;
+        line-height: normal;
+        padding: 0 8px;
+    }
+}
+
+.ss-frm__tp-col {
+    // display: inline-block;
+    // vertical-align: top;
+    // width: 48%;
+    margin-bottom: 20px;
+
+    .frm-title,
+    .frm-desc { 
+        margin-bottom: 10px;
+
+        * {
+            // font-weight: bold;
+        }
+    }
+
+    .frm-desc:last-child * {
+        font-size: 14px;
+        line-height: normal;
+        font-weight: normal;
+    }
+}
+
+
+// Typography
+.ss-frm__typo {
+
+    .ss-upscale {
+        font-size: 40px;
+    }
+}
+
+
+// Code Background
+.code--bg {
+    padding: 10px 10px;
+    background-color: $color--gray--600;
+
+    p {
+        display: block;
+        color: $color--white;
+        margin-bottom: 0;
+    }
+
+    small {
+        display: block;
+        color: $color--gray--100;
+    }
+
+    code {
+        display: block;
+        width: 100%;
+        white-space: normal;
+        box-shadow: none;
+        background-color: transparent;
+    }
+}
+
+
+// Inputs
+
+.frm-form__row {
+    position: relative;
+
+    .error--text {
+        input {
+            border-color: red !important;
+        }
+
+        .v-label {
+            color: red !important;
+        }
+
+        .v-messages__message {
+            color: red;
+        }        
+    }
+
+}
+
+
+
+
+
+
+// Buttons
+
+.frm-btn {
+    .btn { 
+        border-radius: 8px !important;
+        color: $color--white !important;
+        font-family: $font--main !important;
+        font-size: $font-size-smaller !important;
+        margin-top: 0;
+        box-shadow: none !important;
+
+        &.btn-large {
+            min-width: 100% !important;
+            max-width: 343px !important;
+            height: 50px !important;
+        }
+
+        &.btn-small {
+            min-width: 165px !important;
+            max-width: 165px !important;
+            height: 42px !important;
+        }
+
+        &.outline-1 {
+            color: $color--primary !important;
+            border: 1px solid $color--primary;
+
+            &.theme--light.v-btn.v-btn--disabled, 
+            .theme--light.v-btn.v-btn--disabled .v-btn__loading, 
+            .theme--light.v-btn.v-btn--disabled .v-icon {
+                border-color: $color--primary !important;
+                color: $color--primary !important; 
+            }
+        }
+
+        &.type-1 {
+            background-color: $color--primary !important;
+        }
+    }
+
+
+    .theme--light.v-btn.v-btn--disabled:not(.v-btn--flat):not(.v-btn--text):not(.v-btn--outlined) {
+        color: $color--white !important;
+        background-color: $color--primary !important;
+    }
+
+    .rounded-btn-1 {
+        background-color: $color--primary !important;
+
+        i {
+            color: $color--white !important;
+            font-size: $font-size-default !important;
+        }
+    }
+
+    .edit-btn {
+        background-color: transparent !important;
+        box-shadow: none;
+        font-family: $font--main !important;
+        font-size: $font-size-small !important;
+
+        i {
+            font-size: $font-size-small !important;
+        }
+
+        &.type-1 {
+            color: $color--red !important;
+
+            i {
+                color: $color--red !important;
+            }
+        }
+    }
+}

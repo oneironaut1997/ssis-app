@@ -1,0 +1,62 @@
+/** 
+ * VARIABLES
+ * --
+ * Set the default values according to your preference.
+**/
+@import '../fonts/poppins/stylesheet.css';
+
+// Colors | Add description to where it should be place
+$color--primary: #2E3192;       // Use `primary`
+
+$color--secondary: #ED232B;     // Use `secondary`
+
+$color--green: #28A745;         // Use `success`
+$color--red: #DC2545;           // Use `error`
+$color--yellow: #FFBA49;        // 
+$color--orange: #FD7E14;        // Use 'warning'
+
+$color--white: #FFFFFF;         // 
+$color--gray--100: #F8F9FA;     // 
+// $color--gray--200: ;         // 
+$color--gray--300: #DEE2E6;     // 
+// $color--gray--400: ;         // 
+// $color--gray--500: ;         // 
+$color--gray--600: #6C757D;     // 
+// $color--gray--700: ;         // 
+// $color--gray--800: ;         // 
+// $color--gray--900: ;         // 
+$color--black: #000000;         // 
+
+
+// Fonts
+$font--main: 'Poppins', sans-serif;
+
+
+// Font Sizes | Add description to where it should be place
+$font-size-default: 1rem;           //14px | Default
+
+$font-size-largest: 1.786rem;       //25px | H1, 
+$font-size-larger: 1.429rem;        //20px | H2,
+$font-size-large: 1.143rem;         //16px | H3,
+$font-size-medium: 1rem;            //14px | H4,
+$font-size-small: 0.857rem;         //12px | H5,
+$font-size-smaller: 0.714rem;       //10px | H6,
+$font-size-smallest: 0.769rem;      //10px | Small,
+
+
+//Border-Radius
+$border-radius-default: 8px;  //
+$border-radius-20: 20px;      //
+$border-radius-14: 14px;      //
+$border-radius-10: 10px;      //
+$border-radius-4: 4px;        //
+
+
+//z-index notes
+//0-5       - Background elements
+//6-10      - Midground elements
+//11-15     - Foreground elements
+//90        - Elements that includes Header
+//100       - Header
+//120       - Header Side Nav
+//150       - Modals | Pop Up 

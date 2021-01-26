@@ -1,0 +1,133 @@
+/** 
+ * TYPOGRAPHY
+ * --
+ * Set the default values according to your preference.
+**/
+
+html {
+    font-size: 14px !important;
+    font-family: $font--main;
+    line-height: 1.5;
+
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, span,
+    small, strong, ol, ul, li, label, th, td {
+        font-family: $font--main;
+        line-height: 1.5;
+    }
+
+    b, strong {
+        font-weight: bold !important;
+    }
+}
+
+body {
+    font-family: inherit;
+}
+
+h1 {
+    font-size: $font-size-largest !important;
+    font-weight: normal;
+
+    span, b, strong, a {
+        font-size: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+    }
+}
+
+h2 {
+    font-size: $font-size-larger !important;
+    font-weight: normal;
+
+    span, b, strong, a {
+        font-size: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+    }
+}
+
+h3 {
+    font-size: $font-size-large !important;
+    font-weight: normal;
+
+    span, b, strong, a {
+        font-size: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+    }
+}
+
+h4 {
+    font-size: $font-size-medium !important;
+    font-weight: normal;
+
+    span, b, strong, a {
+        font-size: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+    }
+}
+
+h5 {
+    font-size: $font-size-small !important;
+    font-weight: normal;
+
+    span, b, strong, a {
+        font-size: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+    }
+}
+
+h6 {
+    font-size: $font-size-smaller !important;
+    font-weight: normal;
+
+    span, b, strong, a {
+        font-size: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+    }
+}
+
+small {
+    font-size: $font-size-smallest !important;
+
+    span, b, strong, a {
+        font-size: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+    }
+}
+
+p, span, b, strong, a {
+    font-size: $font-size-default;
+
+    span, b, strong, a {
+        font-size: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+
+// Font Size
+.font--size--default { font-size: $font-size-default }
+
+.font--size--largest { font-size: $font-size-largest }
+.font--size--larger { font-size: $font-size-larger }
+.font--size--large { font-size: $font-size-large }
+.font--size--medium { font-size: $font-size-medium }
+.font--size--small { font-size: $font-size-small }
+.font--size--smaller { font-size: $font-size-smaller }
+.font--size--smallest { font-size: $font-size-smallest }
+
+
+// Font-weights
+// .font-weight-regular  // 400
+// .font-weight-medium   // 500
+.font-weight-semibold { font-weight: 600 !important; }

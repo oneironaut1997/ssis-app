@@ -1,0 +1,208 @@
+.main {
+	
+	.v-btn {
+		border-radius: $border-radius-default;
+		text-transform: unset;
+
+		.v-btn__content {
+			line-height: 1.5;
+		}
+
+		.v-ripple__container {
+			display: none !important;
+			filter: brightness(0.5);
+		}
+
+		&:before {
+			display: none;
+		}
+
+		&:not(.v-btn--round).v-size--large {
+			height: 40px;
+		}
+
+		&:not(.v-btn--round).v-size--x-large {
+			height: 50px;
+		}
+
+		&.primary {
+
+			&:active, &:hover, &.active {
+				background-color: darken( $color--primary, 13% ) !important;
+				background-color: #262875 !important;
+			}
+
+			&.v-btn--disabled:not(.v-btn--flat):not(.v-btn--text):not(.v-btn--outlined) {
+				background-color: rgba($color--primary, 0.2) !important;
+				color: $color--gray--600 !important;
+			}
+
+			&.transparent {
+				background-color: transparent !important;
+				box-shadow: unset;
+				min-width: unset;
+
+				&:active, &:hover, &.active {
+					background-color: transparent !important;
+					background-color: transparent !important;
+				}
+
+				&.v-btn--disabled:not(.v-btn--flat):not(.v-btn--text):not(.v-btn--outlined) {
+					background-color: transparent !important;
+					color: transparent !important;
+				}
+
+				.v-btn__content {
+					color: $color--primary;
+				}
+			}
+		}
+
+		&.primary--text {
+
+			&.v-btn--disabled {
+				color: rgba($color--primary, 0.2) !important;
+			}
+
+			&.v-btn--outlined {
+
+				&:active, &:hover, &.active {
+					color: #262875 !important;
+				}
+
+				&::before {
+					display: none;
+				}
+			}
+		}
+
+		&.secondary {
+
+			&:active, &:hover, &.active {
+				background-color: darken( $color--secondary, 13% ) !important;
+				background-color: #D12027 !important;
+			}
+
+			&.v-btn--disabled:not(.v-btn--flat):not(.v-btn--text):not(.v-btn--outlined) {
+				background-color: rgba($color--secondary, 0.2) !important;
+				color: $color--white !important;
+			}
+		}
+
+		&.secondary--text {
+
+			&.v-btn--disabled {
+				color: rgba($color--secondary, 0.2) !important;
+			}
+
+			&.v-btn--outlined {
+
+				&:active, &:hover, &.active {
+					color: #D12027 !important;
+				}
+
+				&::before {
+					display: none;
+				}
+			}
+		}
+
+		&.success {
+
+			&:active, &:hover, &.active {
+				background-color: darken( $color--green, 13% ) !important;
+			}
+
+			&.v-btn--disabled:not(.v-btn--flat):not(.v-btn--text):not(.v-btn--outlined) {
+				background-color: rgba($color--green, 0.2) !important;
+				color: $color--white !important;
+			}
+		}
+
+		&.success--text {
+
+			&.v-btn--disabled {
+				color: rgba($color--green, 0.2) !important;
+			}
+
+			&.v-btn--outlined {
+
+				&:active, &:hover, &.active {
+					color: darken( $color--green, 13% ) !important;
+				}
+
+				&::before {
+					display: none;
+				}
+			}
+		}
+
+		&.error {
+
+			&:active, &:hover, &.active {
+				background-color: darken( $color--red, 13% ) !important;
+			}
+
+			&.v-btn--disabled:not(.v-btn--flat):not(.v-btn--text):not(.v-btn--outlined) {
+				background-color: rgba($color--red, 0.2) !important;
+				color: $color--white !important;
+			}
+		}
+
+		&.error--text {
+
+			&.v-btn--disabled {
+				color: rgba($color--red, 0.2) !important;
+			}
+
+			&.v-btn--outlined {
+
+				&:active, &:hover, &.active {
+					color: darken( $color--red, 13% ) !important;
+				}
+
+				&::before {
+					display: none;
+				}
+			}
+		}
+
+		&.warning {
+
+			&:active, &:hover, &.active {
+				background-color: darken( $color--orange, 13% ) !important;
+			}
+
+			&.v-btn--disabled:not(.v-btn--flat):not(.v-btn--text):not(.v-btn--outlined) {
+				background-color: rgba($color--orange, 0.2) !important;
+				color: $color--white !important;
+			}
+		}
+
+		&.warning--text {
+
+			&.v-btn--disabled {
+				color: rgba($color--orange, 0.2) !important;
+			}
+
+			&.v-btn--outlined {
+
+				&:active, &:hover, &.active {
+					color: darken( $color--orange, 13% ) !important;
+				}
+
+				&::before {
+					display: none;
+				}
+			}
+		}
+
+		&.v-btn--tile {
+			height: 50px !important;
+			min-width: 55px !important;
+			.v-icon {
+				font-size: $font-size-large;
+			}
+		}
+	}
+}
