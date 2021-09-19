@@ -1,5 +1,5 @@
 {
-  "name": "loan",
+  "name": "vue-boilerplate",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -40,16 +40,5 @@
     "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.11",
     "vuetify-loader": "^1.4.3"
-  },
-  "description": "## Project setup ``` npm install ```",
-  "main": ".eslintrc.js",
-  "directories": {
-    "test": "tests"
-  },
-  "repository": {
-    "type": "git",
-    "url": "ssh://git@gitlab.praxxys.ph:52222/praxxys-front-end/design-system-mobile-app.git"
-  },
-  "author": "",
-  "license": "ISC"
+  }
 }

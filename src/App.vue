@@ -4,11 +4,10 @@
 		<PRXProgressLoader></PRXProgressLoader>
 		<v-content class="pa-0">
 
-			<v-container fill-height pa-0>
+			<v-container fill-height pa-0 mt-12>
 				<router-view :key="$route.fullPath"></router-view>
 			</v-container>
 
-			<!-- <bottom-navigation></bottom-navigation> -->
 
 			<PRXAlert></PRXAlert>
 			<PRXDialogLoader></PRXDialogLoader>
@@ -20,7 +19,6 @@
 <script type="text/javascript">
 
 import TopNavigation from './partials/TopNavigation.vue'
-// import BottomNavigation from './partials/BottomNavigation.vue'
 
 export default {
   mounted () {
@@ -28,7 +26,6 @@ export default {
 
   components: {
     'top-navigation': TopNavigation,
-    // 'bottom-navigation': BottomNavigation
   },
 };
 </script>
