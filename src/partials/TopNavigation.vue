@@ -2,30 +2,34 @@
 	<div>
 		<!-- Top Navigation -->
 		<v-app-bar app
-			color="teal accent-4"
+			color="accent-4"
 			dark
 			dense
+			flat
 			>
-			<v-app-bar-nav-icon @click="showSidebar"></v-app-bar-nav-icon>
-			<v-spacer></v-spacer>
-			<v-toolbar-items
-				v-for="item in items"
-				:key="item.title"
+			<div class="width--100 d-flex align-center justify-space-between">
+				<v-btn
+				v-if="!$PRXRouter().isOnRoute('home')"
+				icon
+				color="white"
+				@click="goBack"
 				>
-				<v-btn @click="$PRXRouter().goTo(item.action)" small text color="white" :input-value="$PRXRouter().isOnRoute(item.action)">
-					{{ item.title }}
+				<v-icon>fa-chevron-left</v-icon>
 				</v-btn>
-			</v-toolbar-items>
+				<v-app-bar-nav-icon color="white" :class="!$PRXRouter().isOnRoute('home') ? '' : 'mx-auto d-block'" @click="showSidebar"></v-app-bar-nav-icon>
+			</div>
+			<v-spacer></v-spacer>
+
 		</v-app-bar>
 		<!-- Sidebar -->
 		<v-navigation-drawer temporary v-model="drawer" app color="white">
-			<v-list-item class="teal">
+			<v-list-item class="white">
 				<v-list-item-content>
-					<v-list-item-title class="title white--text">
-						PRAXXYS
+					<v-list-item-title class="title black--text">
+						LOAN APP
 					</v-list-item-title>
-					<v-list-item-subtitle class="white--text">
-						Vuetify Boilerplate
+					<v-list-item-subtitle class="black--text">
+						Sample Text
 					</v-list-item-subtitle>
 				</v-list-item-content>
 			</v-list-item>
@@ -71,14 +75,24 @@
 						action: 'home'
 					},
 					{
-						title: 'Page',
-						icon: 'fa-file',
-						action: 'page'
+						title: 'Loans',
+						icon: 'fa-chart-pie',
+						action: 'loans'
 					},
 					{
-						title: 'Form',
-						icon: 'fa-pen-square',
-						action: 'form'
+						title: 'Contact Us',
+						icon: 'fa-address-book',
+						action: 'contact-us'
+					},
+					{
+						title: 'Account',
+						icon: 'fa-user-circle',
+						action: 'profile'
+					},
+					{
+						title: 'Login',
+						icon: 'fa-sign-in-alt',
+						action: 'login'
 					},
 				]
 
@@ -88,8 +102,19 @@
 		methods: {
 			showSidebar () {
 				this.drawer = true;
+			},
+
+			goBack() {
+				this.$router.back();
 			}
 		}
 
 	}
 </script>
+<style lang="scss">
+	
+	.v-app-bar.v-app-bar--fixed {
+		position: relative;
+		background-color: #29648a !important; 
+	}
+</style>

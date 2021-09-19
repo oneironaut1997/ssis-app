@@ -1,6 +1,7 @@
 <template>
 	<v-bottom-navigation absolute
 		v-model="bottomNav"
+		class="bottm__nav"
 		>
 		<v-btn 
             v-for="item in items"
@@ -25,22 +26,38 @@
 				bottomNav: true,
                 items: [
                     {
-                        title: 'Home',
-                        icon: 'fa-home',
-                        action: 'home'
-                    },
-                    {
-                        title: 'Page',
-                        icon: 'fa-file',
-                        action: 'page'
-                    },
-                    {
-                        title: 'Form',
-                        icon: 'fa-pen-square',
-                        action: 'form'
-                    },
+						title: 'Home',
+						icon: 'fa-home',
+						action: 'home'
+					},
+					{
+						title: 'Loans',
+						icon: 'fa-chart-pie',
+						action: 'loans'
+					},
+					{
+						title: 'Contact Us',
+						icon: 'fa-address-book',
+						action: 'contact-us'
+					},
+					{
+						title: 'Account',
+						icon: 'fa-user-circle',
+						action: 'profile'
+					},
                 ]
 			}
 		},
 	}
 </script>
+<style lang="scss">
+	.bottm__nav {
+		height: 70px !important;
+
+		.v-btn__content span {
+			margin-top: 10px !important;
+			font-size: 12px;
+		}
+	}
+
+</style>
