@@ -10,6 +10,12 @@ import store from './store'
 import PRXVuetifyComponents from '@praxxys/vuetify-components'
 import PRXVueUtils from '@praxxys/vue-utils'
 
+import InformationDialog from './components/dialog/InformationDialog.vue';
+Vue.component('InformationDialog', InformationDialog);
+
+import Loader from './components/loader/Loader.vue';
+Vue.component('Loader', Loader);
+
 Vue.config.productionTip = false
 
 Vue.use(PRXVuetifyComponents);
@@ -32,7 +38,7 @@ var app = {
 	},
 
 	setup () {
-		// require('./mixins/global')
+		require('./assets/js/mixins/global')
 
 		new Vue({
 			vuetify,
@@ -48,11 +54,15 @@ var app = {
 
 			methods: {
 				init () {
-					//this.navigate()
+					this.navigate()
 				},
 
 				navigate () {
-					//this.$router.replace({ name: 'home' })
+					if(localStorage.authToken) {
+						this.$store.commit('user/setAuth', true);
+					}
+
+					this.$router.replace({ name: 'home' })
 				}
 			}
 		})

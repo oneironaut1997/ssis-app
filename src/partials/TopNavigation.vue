@@ -16,7 +16,7 @@
 				>
 				<v-icon>fa-chevron-left</v-icon>
 				</v-btn>
-				<v-app-bar-nav-icon color="white" :class="!$PRXRouter().isOnRoute('home') ? '' : 'mx-auto d-block'" @click="showSidebar"></v-app-bar-nav-icon>
+				<v-app-bar-nav-icon color="white" class="ml-auto" @click="showSidebar"></v-app-bar-nav-icon>
 			</div>
 			<v-spacer></v-spacer>
 
@@ -26,7 +26,7 @@
 			<v-list-item class="white">
 				<v-list-item-content>
 					<v-list-item-title class="title black--text">
-						LOAN APP
+						SSIS APP
 					</v-list-item-title>
 					<v-list-item-subtitle class="black--text">
 						Sample Text
@@ -40,21 +40,44 @@
 			dense
 			nav
 			>
-				<v-list-item
-					v-for="item in items"
-					:key="item.title"
-					link
-					@click="$PRXRouter().goTo(item.action)"
-					:input-value="$PRXRouter().isOnRoute(item.action)"
-					>
-					<v-list-item-icon>
-					<v-icon>{{ item.icon }}</v-icon>
-					</v-list-item-icon>
+				<!-- <template v-if="authenticated">
+					<template v-for="item in items">
+						<v-list-item
+							:key="item.title"
+							link
+							@click="$PRXRouter().goTo(item.action)"
+							:input-value="$PRXRouter().isOnRoute(item.action)"
+							v-if="item.title !== 'Login'"
+							>
+									<v-list-item-icon>
+									<v-icon>{{ item.icon }}</v-icon>
+									</v-list-item-icon>
 
-					<v-list-item-content>
-						<v-list-item-title>{{ item.title }}</v-list-item-title>
-					</v-list-item-content>
-				</v-list-item>
+									<v-list-item-content>
+										<v-list-item-title>{{ item.title }}</v-list-item-title>
+									</v-list-item-content>
+						</v-list-item>
+					</template>
+				</template> -->
+							<!-- v-if="item.title !== 'Account'" -->
+				<template>
+					<template v-for="item in items">
+						<v-list-item
+							:key="item.title"
+							link
+							@click="$PRXRouter().goTo(item.action)"
+							:input-value="$PRXRouter().isOnRoute(item.action)"
+							>
+									<v-list-item-icon>
+									<v-icon color="primary">{{ item.icon }}</v-icon>
+									</v-list-item-icon>
+
+									<v-list-item-content>
+										<v-list-item-title>{{ item.title }}</v-list-item-title>
+									</v-list-item-content>
+						</v-list-item>
+					</template>
+				</template>
 			</v-list>
 		</v-navigation-drawer>
 	</div>
@@ -62,8 +85,6 @@
 
 <script type="text/javascript">
 	export default {
-		mounted () {
-		},
 
 		data() {
 			return {
@@ -75,14 +96,29 @@
 						action: 'home'
 					},
 					{
-						title: 'Loans',
-						icon: 'fa-chart-pie',
-						action: 'loans'
+						title: 'Request',
+						icon: 'fa-comment-dots',
+						action: 'request'
 					},
 					{
-						title: 'Contact Us',
-						icon: 'fa-address-book',
-						action: 'contact-us'
+						title: 'Application',
+						icon: 'fa-file-contract',
+						action: 'application'
+					},
+					{
+						title: 'Inquiry',
+						icon: 'fa-comments',
+						action: 'inquiry'
+					},
+					{
+						title: 'Annoucements',
+						icon: 'fa-bullhorn',
+						action: 'announcements'
+					},
+					{
+						title: 'Notifications',
+						icon: 'fa-bell',
+						action: 'Notifications'
 					},
 					{
 						title: 'Account',
@@ -94,9 +130,24 @@
 						icon: 'fa-sign-in-alt',
 						action: 'login'
 					},
+					{
+						title: 'Logout',
+						icon: 'fa-sign-out-alt',
+						action: 'logout'
+					},
 				]
 
 			}
+		},
+
+		mounted () {
+
+		},
+
+		computed : {
+			authenticated() {
+				return this.$store.state.user.authenticated;
+			},
 		},
 
 		methods: {
@@ -115,6 +166,6 @@
 	
 	.v-app-bar.v-app-bar--fixed {
 		position: relative;
-		background-color: #29648a !important; 
+		background-color: #022C43 !important; 
 	}
 </style>

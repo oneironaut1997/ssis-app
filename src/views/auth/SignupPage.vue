@@ -9,152 +9,107 @@
                             class="mx-auto"
                             max-height="100"
                             max-width="100"
-                            :src="$PRXConfig().staticUrl('logo.png')"
+                            :src="$PRXConfig().staticUrl('ssis-logo-dark.png')"  
                         ></v-img>
                     </v-col>
                     <v-col cols="12 mb-4">
                         <h4 class="font-weight-700 clr--black">Create Account</h4>
                     </v-col>
-                    <!-- <v-col cols="12">
-                        <p class="mb-0 clr--black font--size--smaller width--80 mx-auto">Lorem ipsum dolor sit amet consectetur adipiscing elit sed</p>
-                    </v-col> -->
                 </v-row>
                 <form>
                     <v-row no-gutters class="mb-0">
                         <v-col cols="12">
                             <v-text-field
-                            filled
-                            rounded
-                            :rules="accountNumberRules"
-                            label="Account Number"
+                            label="First Name *"
                             required
-                            ></v-text-field>
-                        </v-col>
-                        <v-col cols="12" v-if="accountNumberExist">
-                            <v-text-field
-                            filled
-                            rounded
-                            :rules="firstNameRules"
-                            label="First Name"
-                            required
+                            name="first_name"
+                            v-model="payload.first_name"
                             ></v-text-field>
 
                             <v-text-field
-                            filled
-                            rounded
-                            :rules="middleNameRules"
-                            label="Middle Name"
+                            label="Middle Name *"
                             required
+                            name="middle_name"
+                            v-model="payload.middle_name"
                             ></v-text-field>
 
                             <v-text-field
-                            filled
-                            rounded
-                            :rules="lastNameRules"
-                            label="Last Name"
+                            label="Last Name *"
                             required
+                            name="last_name"
+                            v-model="payload.last_name"
                             ></v-text-field>
 
                             <v-text-field
-                            filled
-                            rounded
-                            :rules="emailRules"
-                            label="Email"
+                            label="Username *"
                             required
+                            name="username"
+                            v-model="payload.username"
+                            ></v-text-field>
+
+                            <v-text-field
+                            label="Email *"
+                            required
+                            name="email"
+                            v-model="payload.email"
                             ></v-text-field>
 
                             <v-select
                             :items="items"
-                            filled
-                            rounded
-                            :rules="genderRules"
-                            label="Gender"
+                            label="Gender *"
                             required
+                            name="gender"
+                            v-model="payload.gender"
                             ></v-select>
 
                             <v-text-field
-                            filled
-                            rounded
-                            :rules="contactNumberRules"
-                            label="Contact Number"
+                            label="Contact Number *"
                             required
+                            name="mobile_number"
+                            v-model="payload.mobile_number"
+                            ></v-text-field>
+
+                            <v-text-field 
+                            type="date" 
+                            label="Birthdate *"
+                            name="birthdate" 
+                            v-model="payload.birthday"
                             ></v-text-field>
 
                             <v-text-field
-                            filled
-                            rounded
-                            :rules="placeBirthRules"
-                            label="Place of Birth"
+                            label="Address *"
                             required
+                            name="address"
+                            v-model="payload.address"
                             ></v-text-field>
+
                             <v-text-field 
-                            filled
-                            rounded
-                            label="PASSWORD"
+                            label="Password *"
                             :append-icon="show1 ? 'fa-eye' : 'fa-eye-slash'"
                             :type="show1 ? 'text' : 'password'"
                             @click:append="show1 = !show1"
-                            :disabled="loader" 
+                            name="password"
+                            v-model="payload.password"
                             >
                             </v-text-field>
                             <v-text-field 
-                            filled
-                            rounded
-                            label="Confirm Password"
+                            label="Confirm Password *"
                             :append-icon="show2 ? 'fa-eye' : 'fa-eye-slash'"
                             :type="show2 ? 'text' : 'password'"
                             @click:append="show2 = !show2"
-                            :disabled="loader" 
+                            name="password"
+                            v-model="payload.password_confirmation"
                             >
                             </v-text-field>
                         </v-col>
                     </v-row>
                     <v-row no-gutters class="mb-5">
                         <v-col cols="12">
-                            <template v-if="!accountNumberExist">
-                                <v-btn large rounded color="#29648a" block @click="checkForAccountNumber">
-                                    <span class="text--white font-weight-bold">
-                                        PROCEED
-                                    </span>
-                                </v-btn>
-                            </template>
-                            <template v-else>
-                                <v-btn large rounded color="#29648a" block @click="register">
-                                    <span class="text--white font-weight-bold">
-                                        SIGN UP
-                                    </span>
-                                </v-btn>
-                            </template>
-
-                            <v-dialog
-                              v-model="dialog"
-                            >
-                              <v-card>
-                                <v-row no-gutters>
-                                    <v-col cols="12" class="text-center px-8 py-8">
-                                        <v-img
-                                            width="61"
-                                            height="61"
-                                            :src="$PRXConfig().staticUrl('icons/ic-success.svg')"
-                                            class="mx-auto mb-4"
-                                        ></v-img>
-                                        <h4 class="clr--black mb-4 font-weight-700">Successfully registered!</h4>
-                                        <p class="mb-6 clr--black text-xs-justify font--size--small">
-                                            Please wait while the admin is still reviewing your account, you’ll be notified once approved.
-                                        </p>
-                                        <v-row no-gutters>
-                                          <v-col cols="12">
-                                            <v-btn large rounded color="#29648a" @click="closeDialog">
-                                                <span class="text--white font-weight-bold">
-                                                    OK
-                                                </span>
-                                            </v-btn>
-                                          </v-col>
-                                        </v-row>
-                                    </v-col>
-                                </v-row>
-                              </v-card>
-                            </v-dialog>
+                            <v-btn large rounded color="primary" block @click="submit">
+                                <span class="text--white font-weight-bold">
+                                    SIGN UP
+                                </span>
+                            </v-btn>
                         </v-col>
                     </v-row>
                     <v-row no-gutters>
@@ -174,43 +129,14 @@ export default {
 
     data () {
         return {
-            dialog: false,
             show1: false,
             show2: false,
-            accountNumberExist: false,
-            accountNumberRules: [
-                v => !!v || 'Account Number is required',
-            ],
-            firstNameRules: [
-                v => !!v || 'First Name is required',
-            ],
-            middleNameRules: [
-                v => !!v || 'Middle Name is required',
-            ],
-            lastNameRules: [
-                v => !!v || 'Last Name is required',
-            ],
-            emailRules: [
-                v => !!v || 'E-mail is required',
-                v => /.+@.+\..+/.test(v) || 'E-mail must be valid',
-            ],
-            contactNumberRules: [
-                v => !!v || 'Contact Number is required',
-            ],
-            genderRules: [
-                v => !!v || 'Gender is required',
-            ],
-            placeBirthRules: [
-                v => !!v || 'Place of Birth is required',
-            ],
-            addressRules: [
-                v => !!v || 'Address is required',
-            ],
             items: [
             'Male',
             'Female',
             'Prefer not to say',
             ],
+            payload: {},
         }
     },
 
@@ -228,17 +154,20 @@ export default {
     },
 
     methods: {
-        checkForAccountNumber() {
-            this.accountNumberExist = true;
+        submit() {
+            this.$loader.show();
+            axios.post(this.routes['api.register'], this.payload)
+                .then(response => {
+                    this.isSuccess = true;
+                    this.$loader.hide();
+                    this.$alert.show(response.data.message, 'Success');
+                    this.$PRXRouter().goTo('login');
+                }).catch(error => {
+                    this.isSuccess = false;
+                    this.$loader.hide();          
+                    this.$alert.show(this.parseResponse(error, 1), 'Oooops!');
+                })
         },
-
-        register() {
-            this.dialog = true;
-        },
-
-        closeDialog() {
-            this.dialog = false;
-        }
     }
 }
 </script>

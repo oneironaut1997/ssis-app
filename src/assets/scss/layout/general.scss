@@ -58,3 +58,53 @@ body {
 .br-8 {
     border-radius: 8px !important;
 }
+
+// Splash Screen
+.splash-sreen__row {
+
+    .v-dialog-splash {
+        display: block;
+        z-index: 99;
+        background-color: #022C43;
+        max-height: 103vh;
+        height: 103vh;
+        width: 100%;
+        margin: 0;
+        box-shadow: unset;
+        position: absolute;
+
+    }
+}
+
+.splash-screen-logo__hldr {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+    .splash-screen__logo {
+        margin: 0 auto;
+        display: block;
+        transition: all 2s ease;
+    }
+
+    &.animate {
+        animation: floatingUp 2s ease;
+
+        .splash-screen__logo {
+            width: 90px;
+            height: 55px;
+        }
+    }
+
+    @keyframes floatingUp {
+        0% {
+            top: 30%;
+        }
+        100% {
+            top: 45px;
+        }
+    }
+    
+}   

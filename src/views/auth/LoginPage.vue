@@ -9,14 +9,11 @@
                             class="mx-auto"
                             max-height="100"
                             max-width="100"
-                            :src="$PRXConfig().staticUrl('logo.png')"
+                            :src="$PRXConfig().staticUrl('ssis-logo-dark.png')"
                         ></v-img>
                     </v-col>
-                    <v-col cols="12">
-                        <!-- <p class="mb-0 clr--black font--size--smaller width--80 mx-auto">v{{ appobj.version }}</p> -->
-                    </v-col>
                     <v-col cols="12 mb-4">
-                        <h4 class="font-weight-700 clr--black">Welcome Back!</h4>
+                        <h4 class="font-weight-700 clr--black">Login</h4>
                     </v-col>
                 </v-row>
                 <form>
@@ -24,33 +21,25 @@
                     <v-col cols="12">
                         <div class="frm-form__row mb-0">
                             <v-text-field
-                              filled
-                              rounded
-                              label="Email/Phone Number"
-                              v-model="form.username"
-                              :rules="usernameRules"
+                              label="Username *"
+                              v-model="payload.username"
                             ></v-text-field>
-                              <!-- :error-messages="getErrors('username')" -->
                         </div>
                         <div class="frm-form__row mb-0">
                             <v-text-field 
-                                filled
-                                rounded
-                                label="PASSWORD"
+                                label="Password *"
                                 :append-icon="show1 ? 'fa-eye-slash' : 'fa-eye'"
                                 :type="show1 ? 'text' : 'password'"
                                 @click:append="show1 = !show1"
-                                v-model="form.password"
-                                :rules="passwordRules"
+                                v-model="payload.password"
                             >
-                                <!-- :error-messages="getErrors('password')" -->
                             </v-text-field>
                         </div>
                     </v-col>
                 </v-row>
                 <v-row no-gutters class="mb-8">
                     <v-col cols="12">
-                        <v-btn large rounded color="#29648a" block @click="login">
+                        <v-btn large rounded color="primary" block @click="login">
                             <span class="text--white font-weight-bold">
                                 LOGIN
                             </span>
@@ -75,23 +64,39 @@ export default {
     data() {
         return {
             show1: false,
-            form:{
-                username:null,
-                password:null
-            },
-            usernameRules: [
-                v => !!v || 'Username is required',
-            ],
-            passwordRules: [
-                v => !!v || 'Password is required',
-            ],
+            payload:{},
         }
     },
 
     methods:{
         login() {
-            this.$router.push('/');
-        }
+
+            this.payload.session_id = this.getSessionId();
+
+            this.$loader.show();
+            axios.post(this.routes['api.login'], this.payload)
+                .then(response => {
+                    const data = response.data;
+
+                    if(data.token && data.user) {
+                        this.$store.commit('user/set', data.user);
+                        this.$store.commit('user/setAuth', true);
+                        this.setItem('user', data.user);
+                        window.localStorage.setItem('authToken', data.token);
+                        window.axios.defaults.headers.common['Authorization'] = data.token;
+                    }
+
+                    this.$alert.show(this.parseResponse(data.message), 'Success!');
+                    setTimeout(() => {
+                        this.$router.push('/');
+                    }, 1000)
+
+                }).catch(error => {
+                    this.$alert.show(this.parseResponse(error, 1), 'Oppps...');
+                }).finally(() => {
+                    this.$loader.hide();
+                });
+        },
     }
 }
 </script>
