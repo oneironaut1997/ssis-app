@@ -5,7 +5,7 @@
 		<PRXProgressLoader></PRXProgressLoader>
 		<v-content class="pa-0">
 
-			<v-container fill-height pa-0>
+			<v-container fill-height pa-0 mt-12>
 				<router-view :key="$route.fullPath"></router-view>
 			</v-container>
 
@@ -31,13 +31,14 @@ export default {
 
   mounted () {
 		this.fetch();
+		this.navigate();
 		document.addEventListener("backbutton", this.backbutton.bind(this), false);
   },
 
   computed: {
-		// fetchUrl() {
-		// 	return this.$PRXConfig().api.url + '/api/config/fetch';
-		// },
+		fetchUrl() {
+			return this.$PRXConfig().api.url + '/api/config/fetch';
+		},
 	},
 
 	methods: {
@@ -53,24 +54,24 @@ export default {
 		fetch() {
 			this.$refs.splashscreen.splash = true;
 
-			// this.$loader.show();
-			// axios.post(this.fetchUrl)
-			// 	.then(({ data }) => {
-			// 	this.setItem('routes', data.routes);
-			// 	this.$store.commit('page/set', data.pages);
-			// 	this.$loader.hide();
+			this.$loader.show();
+			axios.post(this.fetchUrl)
+				.then(({ data }) => {
+				this.setItem('routes', data.routes);
+				this.$store.commit('page/set', data.pages);
+				this.$loader.hide();
 
-			// 	axios.post(this.routes['api.resources.fetch'])
-			// 		.then(response => {
-			// 		this.$loader.hide();
+				// axios.post(this.routes['api.resources.fetch'])
+				// 	.then(response => {
+				// 	this.$loader.hide();
 
-			// 	}).catch(error => {
-			// 	this.$loader.hide();
-			// 	})
-			// }).catch(err => {
-			// this.$PRX.alert.error(err, 'Network Error', 'options');
-			// this.$loader.hide();
-			// })
+				// }).catch(error => {
+				// this.$loader.hide();
+				// })
+			}).catch(err => {
+			this.$PRX.alert.error(err, 'Network Error', 'options');
+			this.$loader.hide();
+			})
 		},
 	}
 };

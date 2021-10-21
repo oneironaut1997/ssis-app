@@ -1,7 +1,7 @@
 <template>
 	<v-container fill-height align-baseline class="home-page__container pa-0">
 		<div class="width--100">
-			<v-row class="pa-6 mt-8">
+			<v-row class="pa-6">
 				<v-col cols="12">
 					<v-card
 					class="pa-4 br-8"
@@ -59,10 +59,10 @@
     	goTo(val) {
     		switch(val) {
     			case 'registrar-form':
-    				this.$router.push('registrar-form');
+    				this.$router.push('request/registrar-form');
     			break;
     			case 'guidance-form':
-    				this.$router.push('guidance-form');
+    				this.$router.push('request/guidance-form');
     			break;
     			default:
     			break;

@@ -20,8 +20,7 @@
 						alt="John"
 						> -->
 					</v-avatar>
-					<!-- <h1 class="font-weight-bold text-center">{{ user.first_name }}  {{ user.last_name }}</h1> -->
-					<h1 class="font-weight-bold text-center">Sample Name</h1>
+					<h1 class="font-weight-bold text-center">{{ user.first_name }}  {{ user.last_name }}</h1>
 				</div>
 				<v-tabs
 			      v-model="tab"
@@ -34,7 +33,7 @@
 			      </v-tab>
 
 			      <v-tab>
-			        Password 
+			        Security 
 			      </v-tab>
 			    </v-tabs>
 
@@ -79,7 +78,6 @@
 							<v-text-field 
 					        type="date" 
 					        label="Birthdate *"
-					        name="birthdate" 
 					        v-model="user.birthday"
 					        ></v-text-field>
 
@@ -92,11 +90,12 @@
 							></v-textarea>
 
 							<v-btn
+							class="mt-12"
 							rounded
 							color="primary"
 							x-large
 							block
-							@click="save"
+							@click="changeInformation"
 							>
 							<span class="text--white font-weight-bold">
 								Apply Changes
@@ -145,11 +144,12 @@
 
 
 							<v-btn
+							class="mt-12"
 							rounded
 							color="primary"
 							x-large
 							block
-							@click="save"
+							@click="changePassword"
 							>
 							<span class="text--white font-weight-bold">
 								Apply Changes
@@ -181,19 +181,16 @@ export default {
 	}),
 
 	computed: {
-		// user() {
-		// 	return this.getItem('user');
-		// }
+
 	},
 
 	mounted() {
-		let user = this.getItem('user');
-		// this.payloads.user_id = user.id;
+		this.user = this.getItem('user');
 	},
 
 	methods: {
 
-		save() {
+		changeInformation() {
 	      this.$loader.show();
 	      var payloads = new FormData();
 	      payloads.append('user_id', this.user.id);
@@ -217,18 +214,18 @@ export default {
 	      })
 	  	},
 
-	  	// save() {
-	   //    this.$loader.show();
-	   //    axios.post(this.routes['api.user.change-password'], this.payloads)
-	   //      .then(response => {
-	   //        this.$alert.show(response.data.message, response.data.title);
-	   //        this.payloads = {};
-	   //        this.$loader.hide();
-	   //      }).catch(error => {
-	   //        this.$alert.show(this.parseResponse(error, 1), 'Oooops!');
-	   //        this.$loader.hide();
-	   //      })
-	   //  }
+	  	changePassword() {
+	      this.$loader.show();
+	      axios.post(this.routes['api.user.change-password'], this.payloads)
+	        .then(response => {
+	          this.$alert.show(response.data.message, response.data.title);
+	          this.payloads = {};
+	          this.$loader.hide();
+	        }).catch(error => {
+	          this.$alert.show(this.parseResponse(error, 1), 'Oooops!');
+	          this.$loader.hide();
+	        })
+	    }
 	}
 }
 </script>

@@ -7,8 +7,8 @@
                     <v-col cols="12 mb-4">
                         <v-img
                             class="mx-auto"
-                            max-height="100"
-                            max-width="100"
+                            max-height="150"
+                            max-width="150"
                             :src="$PRXConfig().staticUrl('ssis-logo-dark.png')"
                         ></v-img>
                     </v-col>
@@ -37,7 +37,7 @@
                         </div>
                     </v-col>
                 </v-row>
-                <v-row no-gutters class="mb-8">
+                <v-row no-gutters class="mb-5 mt-5">
                     <v-col cols="12">
                         <v-btn large rounded color="primary" block @click="login">
                             <span class="text--white font-weight-bold">

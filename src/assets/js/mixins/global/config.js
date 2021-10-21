@@ -38,6 +38,20 @@ export default {
 	},
     
 	methods: {
+
+        navigate() {
+            const authenticated = this.$store.state.user.authenticated;
+            console.log(authenticated);
+
+            this.$nextTick(() => {
+                if (authenticated) {
+                    this.$PRXRouter().goTo("home");
+                } else if (!authenticated && !this.$PRXRouter().isOnRoute("login")) {
+                    this.$PRXRouter().goTo("login");
+                }
+            });
+        },
+        
         logout() {
             this.$store.commit('user/logout');
             window.localStorage.removeItem('session_id');

@@ -1,7 +1,7 @@
 <template>
 	<v-container fill-height align-baseline class="home-page__container pa-0">
 		<div class="width--100">
-			<v-row class="pa-6 mt-8">
+			<v-row class="pa-6">
 				<v-col cols="6">
 					<v-card
 					class="pa-4 br-8"
@@ -53,7 +53,7 @@
 				<v-col cols="6">
 					<v-card
 					class="pa-4 br-8"
-					@click="goTo('annoucements')"
+					@click="goTo('announcement')"
 					>
 						<v-row>
 							<v-col cols="12" class="d-flex align-center justify-center">
@@ -69,7 +69,7 @@
 				<v-col cols="6">
 					<v-card
 					class="pa-4 br-8"
-					@click="goTo('notifications')"
+					@click="goTo('notification')"
 					>
 						<v-row>
 							<v-col cols="12" class="d-flex align-center justify-center">
@@ -92,7 +92,7 @@
     }),
 
     mounted() {
-
+    	this.navigate();
     },
 
     computed: {
@@ -117,11 +117,11 @@
     			case 'inquiry':
     				this.$router.push('inquiry');
     			break;
-    			case 'announcements':
-    				this.$router.push('announcements');
+    			case 'announcement':
+    				this.$router.push('announcement');
     			break;
-    			case 'notifications':
-    				this.$router.push('notifications');
+    			case 'notification':
+    				this.$router.push('notification');
     			break;
     			default:
     			break;
