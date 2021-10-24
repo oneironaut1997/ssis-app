@@ -42,15 +42,18 @@
                                 <v-radio-group
                                 class="mt-0"
                                 v-model="payloads.gender"
-                                row
                                 >
                                     <v-radio
                                     label="Male"
-                                    value="male"
+                                    value="Male"
                                     ></v-radio>
                                     <v-radio
                                     label="Female"
-                                    value="female"
+                                    value="Female"
+                                    ></v-radio>
+                                    <v-radio
+                                    label="Prefer not to say"
+                                    value="Prefer not to say"
                                     ></v-radio>
                                 </v-radio-group>
 
