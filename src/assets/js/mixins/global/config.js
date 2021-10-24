@@ -40,10 +40,10 @@ export default {
 	methods: {
 
         navigate() {
-            const authenticated = this.$store.state.user.authenticated;
-            console.log(authenticated);
 
             this.$nextTick(() => {
+                const authenticated = this.$store.state.user.authenticated;
+                console.log(authenticated);
                 if (authenticated) {
                     this.$PRXRouter().goTo("home");
                 } else if (!authenticated && !this.$PRXRouter().isOnRoute("login")) {

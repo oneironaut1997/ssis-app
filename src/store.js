@@ -48,6 +48,34 @@ export default new Vuex.Store({
         },
       },
     },
+    courses: {
+      namespaced: true,
+      state: {
+          details: {},
+          authenticated: false,
+          forgotpassword: false,
+      },
+
+      mutations: {
+        set(state, values) {
+            state.details = values ? values : state.details;
+        },
+      },
+    },
+    natureOfConcerns: {
+      namespaced: true,
+      state: {
+          details: {},
+          authenticated: false,
+          forgotpassword: false,
+      },
+
+      mutations: {
+        set(state, values) {
+            state.details = values ? values : state.details;
+        },
+      },
+    },
   },
 
   getters: {

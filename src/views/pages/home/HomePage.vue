@@ -93,6 +93,11 @@
 
     mounted() {
     	this.navigate();
+
+    	this.$loader.show();
+		setTimeout(() => {
+			this.$loader.hide();
+		}, 1000);
     },
 
     computed: {

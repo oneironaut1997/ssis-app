@@ -1,3 +1,4 @@
+
 <template>
 	<v-app>
 		<splash-screen ref="splashscreen"></splash-screen>
@@ -68,6 +69,29 @@ export default {
 				// }).catch(error => {
 				// this.$loader.hide();
 				// })
+
+				axios.post(this.routes['api.user.courses'])
+	        .then(response => {
+	            const data = response.data;
+
+	          this.$store.commit('courses/set', data.courses);
+	          this.setItem('courses', data.courses);
+
+	        }).catch(error => {
+	        	this.$PRX.alert.error(err, 'Network Error', 'options');
+	        })
+
+	      axios.post(this.routes['api.user.nature-of-concerns'])
+	        .then(response => {
+	            const data = response.data;
+
+	          this.$store.commit('natureOfConcerns/set', data.nature_of_concerns);
+	          this.setItem('natureOfConcerns', data.nature_of_concerns);
+
+	        }).catch(error => {
+	        	this.$PRX.alert.error(err, 'Network Error', 'options');
+	        })  
+
 			}).catch(err => {
 			this.$PRX.alert.error(err, 'Network Error', 'options');
 			this.$loader.hide();
