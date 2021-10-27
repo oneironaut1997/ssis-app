@@ -47,7 +47,7 @@
     	this.$loader.show();
 		setTimeout(() => {
 			this.$loader.hide();
-		}, 1000);
+		}, 500);
     },
 
     computed: {

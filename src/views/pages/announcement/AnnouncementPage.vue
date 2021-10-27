@@ -92,7 +92,7 @@
     }),
 
     mounted() {
-
+    	this.fetch();
     },
 
     computed: {
@@ -124,7 +124,37 @@
     			default:
     			break;
     		}
-    	}
+    	},
+
+    	fetch() {
+			this.$loader.show();
+
+	        axios.post(this.routes['api.user.fetch-announcements'])
+	        .then(response => {
+	            const data = response.data;
+
+	          this.$store.commit('registrar_announcements/set', data.registrar_announcements);
+	          this.setItem('registrar_announcements', data.registrar_announcements);
+
+	          this.$store.commit('guidance_announcements/set', data.guidance_announcements);
+	          this.setItem('guidance_announcements', data.guidance_announcements);
+
+	          this.$store.commit('student_service_announcements/set', data.student_service_announcements);
+	          this.setItem('student_service_announcements', data.student_service_announcements);
+
+	          this.$store.commit('cashier_announcements/set', data.cashier_announcements);
+	          this.setItem('cashier_announcements', data.cashier_announcements);
+
+	          this.$store.commit('ictmo_announcements/set', data.ictmo_announcements);
+	          this.setItem('ictmo_announcements', data.ictmo_announcements);
+
+			  this.$loader.hide();
+
+	        }).catch(error => {
+	        	this.$PRX.alert.error(err, 'Network Error', 'options');
+				this.$loader.hide();
+	        })    
+		},
     },
   }
 </script>

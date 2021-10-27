@@ -257,7 +257,7 @@
 				setTimeout(() => {
 					this.$loader.hide();
 					this.logout()
-				}, 1000);
+				}, 500);
 			}
 		}
 

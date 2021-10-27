@@ -40,6 +40,10 @@ export default {
 		fetchUrl() {
 			return this.$PRXConfig().api.url + '/api/config/fetch';
 		},
+
+		user() {
+        return this.getItem('user');
+    }
 	},
 
 	methods: {
@@ -90,7 +94,7 @@ export default {
 
 	        }).catch(error => {
 	        	this.$PRX.alert.error(err, 'Network Error', 'options');
-	        })  
+	        }) 
 
 			}).catch(err => {
 			this.$PRX.alert.error(err, 'Network Error', 'options');

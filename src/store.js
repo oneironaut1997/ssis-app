@@ -52,8 +52,6 @@ export default new Vuex.Store({
       namespaced: true,
       state: {
           details: {},
-          authenticated: false,
-          forgotpassword: false,
       },
 
       mutations: {
@@ -66,8 +64,84 @@ export default new Vuex.Store({
       namespaced: true,
       state: {
           details: {},
-          authenticated: false,
-          forgotpassword: false,
+      },
+
+      mutations: {
+        set(state, values) {
+            state.details = values ? values : state.details;
+        },
+      },
+    },
+
+    transactions: {
+      namespaced: true,
+      state: {
+          details: {},
+      },
+
+      mutations: {
+        set(state, values) {
+            state.details = values ? values : state.details;
+        },
+      },
+    },
+
+    registrar_announcements: {
+      namespaced: true,
+      state: {
+          details: {},
+      },
+
+      mutations: {
+        set(state, values) {
+            state.details = values ? values : state.details;
+        },
+      },
+    },
+
+    guidance_announcements: {
+      namespaced: true,
+      state: {
+          details: {},
+      },
+
+      mutations: {
+        set(state, values) {
+            state.details = values ? values : state.details;
+        },
+      },
+    },
+
+    student_service_announcements: {
+      namespaced: true,
+      state: {
+          details: {},
+      },
+
+      mutations: {
+        set(state, values) {
+            state.details = values ? values : state.details;
+        },
+      },
+    },
+
+    cashier_announcements: {
+      namespaced: true,
+      state: {
+          details: {},
+      },
+
+      mutations: {
+        set(state, values) {
+            state.details = values ? values : state.details;
+        },
+      },
+    },
+
+    ictmo_announcements: {
+      namespaced: true,
+      state: {
+          details: {},
       },
 
       mutations: {
