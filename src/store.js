@@ -150,6 +150,71 @@ export default new Vuex.Store({
         },
       },
     },
+
+    registrar_messages: {
+      namespaced: true,
+      state: {
+          details: {},
+      },
+
+      mutations: {
+        set(state, values) {
+            state.details = values ? values : state.details;
+        },
+      },
+    },
+
+    guidance_messages: {
+      namespaced: true,
+      state: {
+          details: {},
+      },
+
+      mutations: {
+        set(state, values) {
+            state.details = values ? values : state.details;
+        },
+      },
+    },
+
+    student_service_messages: {
+      namespaced: true,
+      state: {
+          details: {},
+      },
+
+      mutations: {
+        set(state, values) {
+            state.details = values ? values : state.details;
+        },
+      },
+    },
+
+    cashier_messages: {
+      namespaced: true,
+      state: {
+          details: {},
+      },
+
+      mutations: {
+        set(state, values) {
+            state.details = values ? values : state.details;
+        },
+      },
+    },
+
+    ictmo_messages: {
+      namespaced: true,
+      state: {
+          details: {},
+      },
+
+      mutations: {
+        set(state, values) {
+            state.details = values ? values : state.details;
+        },
+      },
+    },
   },
 
   getters: {

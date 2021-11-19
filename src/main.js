@@ -16,6 +16,9 @@ Vue.component('InformationDialog', InformationDialog);
 import Loader from './components/loader/Loader.vue';
 Vue.component('Loader', Loader);
 
+import VuePullRefresh from "vue-pull-refresh";
+Vue.component("vue-pull-refresh", VuePullRefresh);
+
 Vue.config.productionTip = false
 
 Vue.use(PRXVuetifyComponents);

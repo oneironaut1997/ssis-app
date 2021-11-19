@@ -37,7 +37,7 @@
 				<v-col cols="12">
 					<v-card
 					class="pa-4 br-8"
-					@click="goTo('student-service--messenger')"
+					@click="goTo('student-service-messenger')"
 					>
 						<v-row>
 							<v-col cols="12" class="d-flex align-center justify-center">
@@ -92,7 +92,7 @@
     }),
 
     mounted() {
-
+    	this.fetch();
     },
 
     computed: {
@@ -104,6 +104,13 @@
     },
 
     methods: {
+    	fetch() {
+    		this.$loader.show();
+			setTimeout(() => {
+				this.$loader.hide();
+			}, 500);
+    	},
+    	
     	goTo(val) {
     		switch(val) {
     			case 'registrar-messenger':

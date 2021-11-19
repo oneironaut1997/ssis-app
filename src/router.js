@@ -14,6 +14,11 @@ import SsoFormPage from './views/pages/application/SsoFormPage.vue'
 
 // Inquiry
 import InquiryPage from './views/pages/inquiry/InquiryPage.vue'
+import RegistrarMessengerPage from './views/pages/inquiry/RegistrarMessengerPage.vue'
+import GuidanceMessengerPage from './views/pages/inquiry/GuidanceMessengerPage.vue'
+import StudentServiceMessengerPage from './views/pages/inquiry/StudentServiceMessengerPage.vue'
+import CashierMessengerPage from './views/pages/inquiry/CashierMessengerPage.vue'
+import IctmoMessengerPage from './views/pages/inquiry/IctmoMessengerPage.vue'
 
 // Annoucement
 import AnnouncementPage from './views/pages/announcement/AnnouncementPage.vue'
@@ -50,6 +55,11 @@ export default new VueRouter({
 
     // Inquiry
     { name: 'inquiry', path: '/inquiry', component: InquiryPage },
+    { name: 'registrar-messenger', path: '/inquiry/registrar-messenger', component: RegistrarMessengerPage },
+    { name: 'guidance-messenger', path: '/inquiry/guidance-messenger', component: GuidanceMessengerPage },
+    { name: 'student-service-messenger', path: '/inquiry/student-service-messenger', component: StudentServiceMessengerPage },
+    { name: 'cashier-messenger', path: '/inquiry/cashier-messenger', component: CashierMessengerPage },
+    { name: 'ictmo-messenger', path: '/inquiry/ictmo-messenger', component: IctmoMessengerPage },
 
     // Announcement
     { name: 'announcement', path: '/announcement', component: AnnouncementPage },

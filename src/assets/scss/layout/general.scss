@@ -107,4 +107,13 @@ body {
         }
     }
     
-}   
+}
+
+.pull-down-container {
+    position: absolute;
+    width: 100%;
+
+    .pull-down-header {
+       background-color: #022C43;
+    }
+}  
