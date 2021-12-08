@@ -142,7 +142,7 @@
                                     ></v-file-input>
                                 </template>
 
-                                <p class="mb-0">Payment Type *</p>
+                                <!-- <p class="mb-0">Payment Type *</p>
                                 <v-radio-group
                                 class="mt-0"
                                 v-model="payloads.payment_type"
@@ -171,7 +171,7 @@
                                     show-size
                                     label="OR Receipt"
                                     ></v-file-input>
-                                </template>
+                                </template> -->
                             </v-col>
                         </v-row>
                         <v-row no-gutters class="mb-5 mt-5">
@@ -283,13 +283,17 @@ export default {
             payloads.append('mothers_occupation', this.payloads.mothers_occupation ? this.payloads.mothers_occupation : '');
             payloads.append('has_school_id', this.payloads.has_school_id ? this.payloads.has_school_id : '');
             payloads.append('file_path_school_id', this.payloads.file_path_school_id ? this.payloads.file_path_school_id : '');
-            payloads.append('payment_type', this.payloads.payment_type ? this.payloads.payment_type : '');
-            payloads.append('file_path', this.payloads.file_path ? this.payloads.file_path : '');
+            // payloads.append('payment_type', this.payloads.payment_type ? this.payloads.payment_type : '');
+            // payloads.append('file_path', this.payloads.file_path ? this.payloads.file_path : '');
 
             axios.post(this.routes['api.user.student-service-transaction'], payloads)
             .then(response => {
                 this.$loader.hide();
                 this.dialog = true;
+
+                setTimeout(() => {
+                    this.$router.push('/');
+                }, 1000)
             }).catch(error => {
                 this.$loader.hide();
                 this.$alert.show(this.parseResponse(error, 1), 'Oooops');

@@ -229,6 +229,10 @@ export default {
             .then(response => {
                 this.$loader.hide();
                 this.dialog = true;
+
+                setTimeout(() => {
+                    this.$router.push('/');
+                }, 1000)
             }).catch(error => {
                 this.$loader.hide();
                 this.$alert.show(this.parseResponse(error, 1), 'Oooops');

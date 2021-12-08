@@ -20,6 +20,13 @@
                     <v-row no-gutters class="mb-0">
                         <v-col cols="12">
                             <v-text-field
+                            label="Student ID *"
+                            required
+                            name="student_id"
+                            v-model="payload.student_id"
+                            ></v-text-field>
+
+                            <v-text-field
                             label="First Name *"
                             required
                             name="first_name"
