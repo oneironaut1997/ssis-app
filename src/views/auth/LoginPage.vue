@@ -37,6 +37,11 @@
                         </div>
                     </v-col>
                 </v-row>
+                <v-row no-gutters>
+                    <v-col cols="12">
+                        <p class="mb-0 text-right"><a @click="$PRXRouter().goTo('forgot-password')">Forgot Password?</a></p>
+                    </v-col>
+                </v-row>
                 <v-row no-gutters class="mb-5 mt-5">
                     <v-col cols="12">
                         <v-btn large rounded color="primary" block @click="login">

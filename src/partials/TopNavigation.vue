@@ -5,6 +5,7 @@
 			v-if="
 			!$PRXRouter().isOnRoute('login')
 			&& !$PRXRouter().isOnRoute('signup')
+			&& !$PRXRouter().isOnRoute('forgot-password')
 			"
 			color="accent-4"
 			dark
@@ -118,19 +119,19 @@
 						action: 'home'
 					},
 					{
-						title: 'Request',
-						icon: 'fa-comment-dots',
-						action: 'request'
+						title: 'Registrar',
+						icon: 'fa-mail-bulk',
+						action: 'registrar-form'
 					},
 					{
-						title: 'Application',
-						icon: 'fa-file-contract',
-						action: 'application'
-					},
-					{
-						title: 'Inquiry',
+						title: 'Inquiries',
 						icon: 'fa-comments',
 						action: 'inquiry'
+					},
+					{
+						title: 'Student Services',
+						icon: 'fa-file-contract',
+						action: 'application'
 					},
 					{
 						title: 'Annoucements',
@@ -138,9 +139,19 @@
 						action: 'announcement'
 					},
 					{
+						title: 'Guidance',
+						icon: 'fa-chalkboard-teacher',
+						action: 'guidance-form'
+					},
+					{
 						title: 'Notifications',
 						icon: 'fa-bell',
 						action: 'notification'
+					},
+					{
+						title: 'ICTMO',
+						icon: 'fa-server',
+						action: 'id-form'
 					},
 					{
 						title: 'Account',
@@ -177,7 +188,6 @@
 					case 'home':
 						name = 'Home';
 						break;
-
 					case 'request':
 						name = 'Request';
 						break;
@@ -186,7 +196,10 @@
 						break;
 					case 'guidance-form':
 						name = 'Guidance';
-						break;		
+						break;
+					case 'id-form':
+						name = 'ID Form';
+						break;			
 
 					case 'application':
 						name = 'Application';

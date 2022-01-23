@@ -99,10 +99,10 @@
                                     label="Cashier"
                                     value="cashier"
                                     ></v-radio>
-                                    <v-radio
+                                    <!-- <v-radio
                                     label="Land Bank Portal"
                                     value="lbp"
-                                    ></v-radio>
+                                    ></v-radio> -->
                                 </v-radio-group>
 
                                 <template v-if="payloads.payment_type == 'lbp'">

@@ -5,30 +5,14 @@
 				<v-col cols="6">
 					<v-card
 					class="pa-4 br-8"
-					@click="goTo('request')"
+					@click="goTo('registrar-form')"
 					>
 						<v-row>
 							<v-col cols="12" class="d-flex align-center justify-center">
-								<v-icon color="primary" class="fz-large">fa-comment-dots</v-icon>
+								<v-icon color="primary" class="fz-large">fa-mail-bulk</v-icon>
 							</v-col>
 							<v-col cols="12" class="d-flex align-center justify-center">
-								<h4 class="font-weight-bold mb-1">Request</h4>
-							</v-col>
-						</v-row>
-					</v-card>
-				</v-col>
-
-				<v-col cols="6">
-					<v-card
-					class="pa-4 br-8"
-					@click="goTo('application')"
-					>
-						<v-row>
-							<v-col cols="12" class="d-flex align-center justify-center">
-								<v-icon color="primary" class="fz-large">fa-file-contract</v-icon>
-							</v-col>
-							<v-col cols="12" class="d-flex align-center justify-center">
-								<h4 class="font-weight-bold mb-1">Application</h4>
+								<h4 class="font-weight-bold mb-1">Registrar</h4>
 							</v-col>
 						</v-row>
 					</v-card>
@@ -44,7 +28,23 @@
 								<v-icon color="primary" class="fz-large">fa-comments</v-icon>
 							</v-col>
 							<v-col cols="12" class="d-flex align-center justify-center">
-								<h4 class="font-weight-bold mb-1">Inquiry</h4>
+								<h4 class="font-weight-bold mb-1">Inquiries</h4>
+							</v-col>
+						</v-row>
+					</v-card>
+				</v-col>
+
+				<v-col cols="6">
+					<v-card
+					class="pa-4 br-8"
+					@click="goTo('application')"
+					>
+						<v-row>
+							<v-col cols="12" class="d-flex align-center justify-center">
+								<v-icon color="primary" class="fz-large">fa-file-contract</v-icon>
+							</v-col>
+							<v-col cols="12" class="d-flex align-center justify-center">
+								<h4 class="font-weight-bold mb-1">Student Services</h4>
 							</v-col>
 						</v-row>
 					</v-card>
@@ -69,6 +69,22 @@
 				<v-col cols="6">
 					<v-card
 					class="pa-4 br-8"
+					@click="goTo('guidance-form')"
+					>
+						<v-row>
+							<v-col cols="12" class="d-flex align-center justify-center">
+								<v-icon color="primary" class="fz-large">fa-chalkboard-teacher</v-icon>
+							</v-col>
+							<v-col cols="12" class="d-flex align-center justify-center">
+								<h4 class="font-weight-bold mb-1">Guidance</h4>
+							</v-col>
+						</v-row>
+					</v-card>
+				</v-col>
+
+				<v-col cols="6">
+					<v-card
+					class="pa-4 br-8"
 					@click="goTo('notification')"
 					>
 						<v-row>
@@ -77,6 +93,22 @@
 							</v-col>
 							<v-col cols="12" class="d-flex align-center justify-center">
 								<h4 class="font-weight-bold mb-1">Notifications</h4>
+							</v-col>
+						</v-row>
+					</v-card>
+				</v-col>
+
+				<v-col cols="6">
+					<v-card
+					class="pa-4 br-8"
+					@click="goTo('id-form')"
+					>
+						<v-row>
+							<v-col cols="12" class="d-flex align-center justify-center">
+								<v-icon color="primary" class="fz-large">fa-server</v-icon>
+							</v-col>
+							<v-col cols="12" class="d-flex align-center justify-center">
+								<h4 class="font-weight-bold mb-1">ICTMO</h4>
 							</v-col>
 						</v-row>
 					</v-card>
@@ -127,6 +159,15 @@
     			break;
     			case 'notification':
     				this.$router.push('notification');
+    			break;
+    			case 'registrar-form':
+    				this.$router.push('request/registrar-form');
+    			break;
+    			case 'guidance-form':
+    				this.$router.push('request/guidance-form');
+    			break;
+    			case 'id-form':
+    				this.$router.push('request/id-form');
     			break;
     			default:
     			break;

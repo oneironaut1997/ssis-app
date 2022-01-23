@@ -9,8 +9,10 @@
 						<v-row>
 							<v-col cols="12">
 								<h3 class="font-weight-bold mb-2">{{ item.name }}</h3>
+								<h5 class="font-weight-bold mb-2">{{ item.when }}</h5>
+								<h5 class="font-weight-bold mb-2">{{ item.where }}</h5>
 								<p class="mb-0">{{ item.description }}</p>
-								<small class="font-weight-bold clr--yellow float-right mt-2">{{ item.created_at }}</small>
+								<!-- <small class="font-weight-bold clr--yellow float-right mt-2">{{ item.when }}</small> -->
 							</v-col>
 						</v-row>
 					</v-card>

@@ -21,22 +21,6 @@
 				<v-col cols="12">
 					<v-card
 					class="pa-4 br-8"
-					@click="goTo('guidance-messenger')"
-					>
-						<v-row>
-							<v-col cols="12" class="d-flex align-center justify-center">
-								<v-icon color="primary" class="fz-large">fa-chalkboard-teacher</v-icon>
-							</v-col>
-							<v-col cols="12" class="d-flex align-center justify-center">
-								<h4 class="font-weight-bold mb-1">Guidance</h4>
-							</v-col>
-						</v-row>
-					</v-card>
-				</v-col>
-
-				<v-col cols="12">
-					<v-card
-					class="pa-4 br-8"
 					@click="goTo('student-service-messenger')"
 					>
 						<v-row>
@@ -53,14 +37,14 @@
 				<v-col cols="12">
 					<v-card
 					class="pa-4 br-8"
-					@click="goTo('cashier-messenger')"
+					@click="goTo('guidance-messenger')"
 					>
 						<v-row>
 							<v-col cols="12" class="d-flex align-center justify-center">
-								<v-icon color="primary" class="fz-large">fa-cash-register</v-icon>
+								<v-icon color="primary" class="fz-large">fa-chalkboard-teacher</v-icon>
 							</v-col>
 							<v-col cols="12" class="d-flex align-center justify-center">
-								<h4 class="font-weight-bold mb-1">Cashier</h4>
+								<h4 class="font-weight-bold mb-1">Guidance</h4>
 							</v-col>
 						</v-row>
 					</v-card>
@@ -77,6 +61,22 @@
 							</v-col>
 							<v-col cols="12" class="d-flex align-center justify-center">
 								<h4 class="font-weight-bold mb-1">ICTMO</h4>
+							</v-col>
+						</v-row>
+					</v-card>
+				</v-col>
+
+				<v-col cols="12">
+					<v-card
+					class="pa-4 br-8"
+					@click="goTo('cashier-messenger')"
+					>
+						<v-row>
+							<v-col cols="12" class="d-flex align-center justify-center">
+								<v-icon color="primary" class="fz-large">fa-cash-register</v-icon>
+							</v-col>
+							<v-col cols="12" class="d-flex align-center justify-center">
+								<h4 class="font-weight-bold mb-1">Cashier</h4>
 							</v-col>
 						</v-row>
 					</v-card>

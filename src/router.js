@@ -8,6 +8,7 @@ import HomePage from './views/pages/home/HomePage.vue'
 import RequestPage from './views/pages/request/RequestPage.vue'
 import RegistrarFormPage from './views/pages/request/RegistrarFormPage.vue'
 import GuidanceFormPage from './views/pages/request/GuidanceFormPage.vue'
+import IDFormPage from './views/pages/request/IDFormPage.vue'
 
 // Application
 import SsoFormPage from './views/pages/application/SsoFormPage.vue'
@@ -37,6 +38,7 @@ import ProfilePage from './views/pages/profile/ProfilePage.vue'
 // Auth
 import Login from './views/auth/LoginPage.vue'
 import Signup from './views/auth/SignupPage.vue'
+import ForgotPassword from './views/auth/ForgotPasswordPage.vue'
 
 Vue.use(VueRouter)
 
@@ -49,6 +51,7 @@ export default new VueRouter({
     { name: 'request', path: '/request', component: RequestPage },
     { name: 'registrar-form', path: '/request/registrar-form', component: RegistrarFormPage },
     { name: 'guidance-form', path: '/request/guidance-form', component: GuidanceFormPage },
+    { name: 'id-form', path: '/request/id-form', component: IDFormPage },
 
     // Application
     { name: 'application', path: '/application', component: SsoFormPage },
@@ -78,5 +81,6 @@ export default new VueRouter({
       // Auth
     { name: 'login', path: '/login', component: Login },
     { name: 'signup', path: '/signup', component: Signup },
+    { name: 'forgot-password', path: '/forgot-password', component: ForgotPassword },
   ]
 })

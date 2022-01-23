@@ -16,7 +16,7 @@
 		      </v-tab>
 
 		      <v-tab>
-		        For Pickup 
+		        For Pickup / For Received
 		      </v-tab>
 
 		      <v-tab>
@@ -40,6 +40,7 @@
 										<small v-if="item.transaction_type == 'App\\Models\\RegistrarTransactions\\RegistrarTransaction'">(Registrar)</small>
 										<small v-if="item.transaction_type == 'App\\Models\\GuidanceTransactions\\GuidanceTransaction'">(Guidance)</small>
 										<small v-if="item.transaction_type == 'App\\Models\\StudentServiceTransactions\\StudentServiceTransaction'">(Student Service)</small>
+										<small v-if="item.transaction_type == 'App\\Models\\IDTransactions\\IDTransaction'">(ICTMO)</small>
 									</p>
 									</div>
 									<template v-if="item.transaction_type == 'App\\Models\\RegistrarTransactions\\RegistrarTransaction'">
@@ -52,6 +53,9 @@
 									</template>
 									<template v-if="item.transaction_type == 'App\\Models\\StudentServiceTransactions\\StudentServiceTransaction'">
 										<p class="mb-0"><b>Category :</b> President and Dean's List Request</p>
+									</template>
+									<template v-if="item.transaction_type == 'App\\Models\\IDTransactions\\IDTransaction'">
+										<p class="mb-0"><b>Category :</b> ID Request</p>
 									</template>
 									<small class="font-weight-bold clr--yellow float-right mt-2">{{ item.created_at }}</small>
 								</v-col>
@@ -79,6 +83,7 @@
 										<small v-if="item.transaction_type == 'App\\Models\\RegistrarTransactions\\RegistrarTransaction'">(Registrar)</small>
 										<small v-if="item.transaction_type == 'App\\Models\\GuidanceTransactions\\GuidanceTransaction'">(Guidance)</small>
 										<small v-if="item.transaction_type == 'App\\Models\\StudentServiceTransactions\\StudentServiceTransaction'">(Student Service)</small>
+										<small v-if="item.transaction_type == 'App\\Models\\IDTransactions\\IDTransaction'">(ICTMO)</small>
 									</p>
 									</div>
 									<template v-if="item.transaction_type == 'App\\Models\\RegistrarTransactions\\RegistrarTransaction'">
@@ -91,6 +96,9 @@
 									</template>
 									<template v-if="item.transaction_type == 'App\\Models\\StudentServiceTransactions\\StudentServiceTransaction'">
 										<p class="mb-0"><b>Category :</b> President and Dean's List Request</p>
+									</template>
+									<template v-if="item.transaction_type == 'App\\Models\\IDTransactions\\IDTransaction'">
+										<p class="mb-0"><b>Category :</b> ID Request</p>
 									</template>
 									<small class="font-weight-bold clr--yellow float-right mt-2">{{ item.created_at }}</small>
 								</v-col>
@@ -118,6 +126,7 @@
 										<small v-if="item.transaction_type == 'App\\Models\\RegistrarTransactions\\RegistrarTransaction'">(Registrar)</small>
 										<small v-if="item.transaction_type == 'App\\Models\\GuidanceTransactions\\GuidanceTransaction'">(Guidance)</small>
 										<small v-if="item.transaction_type == 'App\\Models\\StudentServiceTransactions\\StudentServiceTransaction'">(Student Service)</small>
+										<small v-if="item.transaction_type == 'App\\Models\\IDTransactions\\IDTransaction'">(ICTMO)</small>
 									</p>
 									</div>
 									<template v-if="item.transaction_type == 'App\\Models\\RegistrarTransactions\\RegistrarTransaction'">
@@ -130,6 +139,9 @@
 									</template>
 									<template v-if="item.transaction_type == 'App\\Models\\StudentServiceTransactions\\StudentServiceTransaction'">
 										<p class="mb-0"><b>Category :</b> President and Dean's List Request</p>
+									</template>
+									<template v-if="item.transaction_type == 'App\\Models\\IDTransactions\\IDTransaction'">
+										<p class="mb-0"><b>Category :</b> ID Request</p>
 									</template>
 									<small class="font-weight-bold clr--yellow float-right mt-2">{{ item.created_at }}</small>
 								</v-col>
@@ -157,6 +169,7 @@
 										<small v-if="item.transaction_type == 'App\\Models\\RegistrarTransactions\\RegistrarTransaction'">(Registrar)</small>
 										<small v-if="item.transaction_type == 'App\\Models\\GuidanceTransactions\\GuidanceTransaction'">(Guidance)</small>
 										<small v-if="item.transaction_type == 'App\\Models\\StudentServiceTransactions\\StudentServiceTransaction'">(Student Service)</small>
+										<small v-if="item.transaction_type == 'App\\Models\\IDTransactions\\IDTransaction'">(ICTMO)</small>
 									</p>
 									</div>
 									<template v-if="item.transaction_type == 'App\\Models\\RegistrarTransactions\\RegistrarTransaction'">
@@ -169,6 +182,9 @@
 									</template>
 									<template v-if="item.transaction_type == 'App\\Models\\StudentServiceTransactions\\StudentServiceTransaction'">
 										<p class="mb-0"><b>Category :</b> President and Dean's List Request</p>
+									</template>
+									<template v-if="item.transaction_type == 'App\\Models\\IDTransactions\\IDTransaction'">
+										<p class="mb-0"><b>Category :</b> ID Request</p>
 									</template>
 									<small class="font-weight-bold clr--yellow float-right mt-2">{{ item.created_at }}</small>
 								</v-col>
