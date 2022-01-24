@@ -16,7 +16,7 @@
 		      </v-tab>
 
 		      <v-tab>
-		        For Pickup / For Received
+		        For Pickup / For Dowload
 		      </v-tab>
 
 		      <v-tab>
@@ -131,11 +131,13 @@
 									</div>
 									<template v-if="item.transaction_type == 'App\\Models\\RegistrarTransactions\\RegistrarTransaction'">
 										<p class="mb-0"><b>Category :</b> {{ item.nature_of_concern }} Request</p>
+										<h3 v-if="item.file_path" class="font-weight-bold mt-2"><a :href="item.file_path" target="_blank">Requested File</a></h3>
 									</template>
 									<template v-if="item.transaction_type == 'App\\Models\\GuidanceTransactions\\GuidanceTransaction'">
 										<p class="mb-0"><b>Category :</b> Good Moral Character Request</p>
 										<p class="mb-0"><b>Attainment :</b> {{ item.attainment }}</p>
 										<p class="mb-0"><b>Purpose :</b> {{ item.purpose }}</p>
+										<h3 v-if="item.file_path" class="font-weight-bold mt-2"><a :href="item.file_path" target="_blank">Requested File</a></h3>
 									</template>
 									<template v-if="item.transaction_type == 'App\\Models\\StudentServiceTransactions\\StudentServiceTransaction'">
 										<p class="mb-0"><b>Category :</b> President and Dean's List Request</p>
