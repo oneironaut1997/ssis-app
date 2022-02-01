@@ -1,14 +1,15 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.laon.app" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>ssis-app</name>
+    <name>Student Service Inquiry System</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        Student Service Inquiry System
     </description>
     <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+        Student Service Inquiry System
     </author>
     <content src="index.html" />
     <access origin="*" />
+    <allow-navigation href="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
@@ -16,7 +17,13 @@
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
     <allow-intent href="market:*" />
+    <icon density="ldpi" src="res/android/drawable-ldpi/icon.png" />
+    <icon density="mdpi" src="res/android/drawable-mdpi/icon.png" />
+    <icon density="hdpi" src="res/android/drawable-hdpi/icon.png" />
+    <icon density="xhdpi" src="res/android/drawable-xhdpi/icon.png" />
+    <icon density="xxhdpi" src="res/android/drawable-xxhdpi/icon.png" />
+    <icon density="xxxhdpi" src="res/android/drawable-xxxhdpi/icon.png" />
     <preference name="loglevel" value="DEBUG" />
     <preference name="android-minSdkVersion" value="19" />
-    <preference name="android-targetSdkVersion" value="19" />
+    <preference name="android-targetSdkVersion" value="29" />
 </widget>
