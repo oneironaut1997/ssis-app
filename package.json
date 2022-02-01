@@ -12,7 +12,6 @@
     "@praxxys/vue-utils": "^0.1.1",
     "@praxxys/vuetify-components": "^0.1.2",
     "axios": "^0.19.2",
-    "cordova-android": "^8.1.0",
     "cordova-ios": "^6.1.1",
     "cordova-plugin-inappbrowser": "^4.0.0",
     "cordova-plugin-wkwebview-engine": "^1.2.1",
@@ -38,6 +37,7 @@
     "@vue/test-utils": "1.0.0-beta.31",
     "babel-eslint": "^10.0.3",
     "chai": "^4.1.2",
+    "cordova-android": "^8.0.0",
     "cordova-plugin-device": "^2.0.3",
     "cordova-plugin-file": "^6.0.2",
     "cordova-plugin-network-information": "^2.0.2",
@@ -56,7 +56,26 @@
   },
   "cordova": {
     "platforms": [
+      "browser",
       "android"
-    ]
+    ],
+    "plugins": {
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-geolocation": {},
+      "cordova-plugin-statusbar": {},
+      "com-sarriaroman-photoviewer": {},
+      "cordova-plugin-camera": {},
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-network-information": {},
+      "cordova-plugin-background-mode": {},
+      "cordova-plugin-file": {},
+      "cordova-android-support-gradle-release": {
+        "ANDROID_SUPPORT_VERSION": "27.+"
+      },
+      "cordova-plugin-dialogs": {},
+      "cordova-plugin-device": {},
+      "cordova-plugin-inappbrowser": {},
+      "cordova-plugin-wkwebview-engine": {}
+    }
   }
 }

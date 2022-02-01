@@ -1,0 +1,55 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.laon.app"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.laon.app"
+    },
+    "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "com.laon.app"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.laon.app"
+    },
+    "com-sarriaroman-photoviewer": {
+      "PACKAGE_NAME": "com.laon.app"
+    },
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "com.laon.app"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.laon.app"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "com.laon.app"
+    },
+    "cordova-plugin-background-mode": {
+      "PACKAGE_NAME": "com.laon.app"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.laon.app"
+    },
+    "cordova-android-support-gradle-release": {
+      "ANDROID_SUPPORT_VERSION": "27.+",
+      "PACKAGE_NAME": "com.laon.app"
+    },
+    "cordova-plugin-dialogs": {
+      "PACKAGE_NAME": "com.laon.app"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "com.laon.app"
+    },
+    "cordova-plugin-wkwebview-engine": {
+      "PACKAGE_NAME": "com.laon.app"
+    }
+  },
+  "dependent_plugins": {}
+}

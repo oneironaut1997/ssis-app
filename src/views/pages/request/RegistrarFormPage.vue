@@ -95,14 +95,14 @@
                                 class="mt-0"
                                 v-model="payloads.payment_type"
                                 >
-                                    <v-radio
+                                    <!-- <v-radio
                                     label="Cashier"
                                     value="cashier"
-                                    ></v-radio>
-                                    <!-- <v-radio
+                                    ></v-radio> -->
+                                    <v-radio
                                     label="Land Bank Portal"
                                     value="lbp"
-                                    ></v-radio> -->
+                                    ></v-radio>
                                 </v-radio-group>
 
                                 <template v-if="payloads.payment_type == 'lbp'">
@@ -180,7 +180,7 @@ export default {
         dialog: false,
         payloads: {
             category: 'Student',
-            payment_type: 'cashier'
+            payment_type: 'lbp'
         },
         courses: [],
         nature_of_concern: [],
