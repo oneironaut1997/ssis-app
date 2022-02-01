@@ -122,14 +122,14 @@
                                 class="mt-0"
                                 v-model="payloads.payment_type"
                                 >
-                                    <!-- <v-radio
+                                    <v-radio
                                     label="Cashier"
                                     value="cashier"
-                                    ></v-radio> -->
-                                    <v-radio
+                                    ></v-radio>
+                                    <!-- <v-radio
                                     label="Land Bank Portal"
                                     value="lbp"
-                                    ></v-radio>
+                                    ></v-radio> -->
                                 </v-radio-group>
 
                                 <template v-if="payloads.payment_type == 'lbp'">
@@ -142,7 +142,7 @@
                                         ></v-img>
                                     </a>
                                     <v-file-input
-                                    v-model="payloads.or_file_path"
+                                    v-model="payloads.file_path"
                                     show-size
                                     label="OR Receipt"
                                     ></v-file-input>
@@ -206,8 +206,7 @@ export default {
         return {
             dialog: false,
             payloads: {
-                // payment_type: 'cashier'
-                payment_type: 'lbp'
+                payment_type: 'cashier'
             },
             courses: [],
         }
@@ -249,7 +248,7 @@ export default {
             payloads.append('attainment', this.payloads.attainment ? this.payloads.attainment : '');
             payloads.append('purpose', this.payloads.purpose ? this.payloads.purpose : '');
             payloads.append('payment_type', this.payloads.payment_type ? this.payloads.payment_type : '');
-            payloads.append('or_file_path', this.payloads.or_file_path ? this.payloads.or_file_path : '');
+            payloads.append('file_path', this.payloads.file_path ? this.payloads.file_path : '');
 
             axios.post(this.routes['api.user.guidance-transaction'], payloads)
             .then(response => {
