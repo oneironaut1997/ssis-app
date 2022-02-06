@@ -12,7 +12,7 @@
 								<v-icon color="primary" class="fz-large">fa-mail-bulk</v-icon>
 							</v-col>
 							<v-col cols="12" class="d-flex align-center justify-center">
-								<h4 class="font-weight-bold mb-1">Registrar</h4>
+								<h5 class="font-weight-bold text-center mb-1">Registrar</h5>
 							</v-col>
 						</v-row>
 					</v-card>
@@ -28,7 +28,7 @@
 								<v-icon color="primary" class="fz-large">fa-comments</v-icon>
 							</v-col>
 							<v-col cols="12" class="d-flex align-center justify-center">
-								<h4 class="font-weight-bold mb-1">Inquiries</h4>
+								<h5 class="font-weight-bold text-center mb-1">Inquiries</h5>
 							</v-col>
 						</v-row>
 					</v-card>
@@ -44,7 +44,7 @@
 								<v-icon color="primary" class="fz-large">fa-file-contract</v-icon>
 							</v-col>
 							<v-col cols="12" class="d-flex align-center justify-center">
-								<h4 class="font-weight-bold mb-1">Student Services</h4>
+								<h5 class="font-weight-bold text-center mb-1">Student Service</h5>
 							</v-col>
 						</v-row>
 					</v-card>
@@ -60,7 +60,7 @@
 								<v-icon color="primary" class="fz-large">fa-bullhorn</v-icon>
 							</v-col>
 							<v-col cols="12" class="d-flex align-center justify-center">
-								<h4 class="font-weight-bold mb-1">Announcments</h4>
+								<h5 class="font-weight-bold text-center mb-1">Announcements</h5>
 							</v-col>
 						</v-row>
 					</v-card>
@@ -76,7 +76,7 @@
 								<v-icon color="primary" class="fz-large">fa-chalkboard-teacher</v-icon>
 							</v-col>
 							<v-col cols="12" class="d-flex align-center justify-center">
-								<h4 class="font-weight-bold mb-1">Guidance</h4>
+								<h5 class="font-weight-bold text-center mb-1">Guidance</h5>
 							</v-col>
 						</v-row>
 					</v-card>
@@ -92,7 +92,7 @@
 								<v-icon color="primary" class="fz-large">fa-bell</v-icon>
 							</v-col>
 							<v-col cols="12" class="d-flex align-center justify-center">
-								<h4 class="font-weight-bold mb-1">Notifications</h4>
+								<h5 class="font-weight-bold text-center mb-1">Notifications</h5>
 							</v-col>
 						</v-row>
 					</v-card>
@@ -108,7 +108,7 @@
 								<v-icon color="primary" class="fz-large">fa-server</v-icon>
 							</v-col>
 							<v-col cols="12" class="d-flex align-center justify-center">
-								<h4 class="font-weight-bold mb-1">ICTMO</h4>
+								<h5 class="font-weight-bold text-center mb-1">ICTMO</h5>
 							</v-col>
 						</v-row>
 					</v-card>

@@ -134,7 +134,7 @@
 						action: 'application'
 					},
 					{
-						title: 'Annoucements',
+						title: 'Announcements',
 						icon: 'fa-bullhorn',
 						action: 'announcement'
 					},

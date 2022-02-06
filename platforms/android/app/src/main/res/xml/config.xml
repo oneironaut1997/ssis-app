@@ -74,6 +74,7 @@
     <preference name="StatusBarDefaultScrollToTop" value="false" />
     <preference name="ShowSplashScreenSpinner" value="false" />
     <preference name="SplashScreen" value="none" />
+    <preference name="AndroidExtraFilesystems" value="files,cache, sdcard, cache-external, files-external" />
     <preference name="android-minSdkVersion" value="19" />
     <preference name="android-targetSdkVersion" value="28" />
 </widget>

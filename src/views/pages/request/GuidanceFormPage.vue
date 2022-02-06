@@ -142,7 +142,7 @@
                                         ></v-img>
                                     </a>
                                     <v-file-input
-                                    v-model="payloads.file_path"
+                                    v-model="payloads.or_file_path"
                                     show-size
                                     label="OR Receipt"
                                     ></v-file-input>
@@ -248,7 +248,7 @@ export default {
             payloads.append('attainment', this.payloads.attainment ? this.payloads.attainment : '');
             payloads.append('purpose', this.payloads.purpose ? this.payloads.purpose : '');
             payloads.append('payment_type', this.payloads.payment_type ? this.payloads.payment_type : '');
-            payloads.append('file_path', this.payloads.file_path ? this.payloads.file_path : '');
+            payloads.append('or_file_path', this.payloads.or_file_path ? this.payloads.or_file_path : '');
 
             axios.post(this.routes['api.user.guidance-transaction'], payloads)
             .then(response => {
