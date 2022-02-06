@@ -76,6 +76,9 @@ export default {
         setTimeout(() => {
 	    	this.fetch();
         }, 500);
+        setTimeout(() => {
+	    	this.listen();
+        }, 2000);
     },
 
     computed: {
@@ -105,6 +108,15 @@ export default {
                 this.$loader.hide();
                 this.$alert.show(this.parseResponse(error, 1), 'Oooops');
             })
+    	},
+
+    	listen() {
+        	window.Echo.channel('admin-chat.'+this.ictmo_messages.id)
+	        .listen('.admin.chat-received', (e) => {
+	            console.log(e.chatMessage);
+	            console.log("receiving message...")
+	            this.ictmo_messages.messages.push(e.chatMessage);
+	        })
     	},
 
         submit() {

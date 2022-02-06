@@ -24,6 +24,20 @@ Vue.config.productionTip = false
 Vue.use(PRXVuetifyComponents);
 Vue.use(PRXVueUtils);
 
+// Declarations pusher and echo
+import Echo from "laravel-echo";
+window.Pusher = require("pusher-js");
+
+// localhost credentials
+window.Echo = new Echo({
+  broadcaster: "pusher",
+  key: "local",
+  wsHost: "127.0.0.1",
+  wsPort: 6001,
+  forceTLS: false,
+  disabledStats: true,
+});
+
 
 var app = {
 

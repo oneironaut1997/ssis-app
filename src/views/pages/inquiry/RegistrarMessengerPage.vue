@@ -76,6 +76,10 @@ export default {
         setTimeout(() => {
 	    	this.fetch();
         }, 500);
+        setTimeout(() => {
+	    	this.listen();
+        }, 2000);
+
     },
 
     computed: {
@@ -107,6 +111,15 @@ export default {
             })
     	},
 
+    	listen() {
+        	window.Echo.channel('admin-chat.'+this.registrar_messages.id)
+	        .listen('.admin.chat-received', (e) => {
+	            console.log(e.chatMessage);
+	            console.log("receiving message...")
+	            this.registrar_messages.messages.push(e.chatMessage);
+	        })
+    	},
+
         submit() {
             this.$loader.show();
             var payloads = new FormData();
@@ -117,7 +130,6 @@ export default {
             axios.post(this.routes['api.user.registrar-messenger'], payloads)
             .then(response => {
             	this.fetch();
-
             	this.payloads = {};
                 this.$loader.hide();
             }).catch(error => {
